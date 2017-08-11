@@ -19,7 +19,35 @@ jtapp.userdata={
             "Writing Awesome Web Apps like this one",
             "Reading Books",
 
-        ]
+        ],
+        experiencedIn : {
+            languages:[
+                {
+                    name:"Javascript",
+                    numMonthsOfExperience : 1,
+                    experienceLevel: this.experienceLevels.newbie,
+                    likes:[],
+                    dislikes:[]
+                }
+            ],
+            frameworks:[
+
+            ],
+            programmingConcepts:[
+                "OOP",
+                "MV*",
+                "functional Programming(sorta new)"
+            ],
+            experienceLevels:{ //maybe implement a star rating system : 0 = totally new == 5= Mastered it
+                newbie:"less than one month",
+                beginner: "1  to 6 months",
+                intermediate: "6 to 12 months",
+                advanced: "12 to 18 months",
+                master:"24 months to 36 months",
+                godlike:"36 months or more"
+            }
+
+        }
     }
 };
 jtapp.pageData={
