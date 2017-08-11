@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us" ng-app="jtmorris-me" ng-controller="mainController">
+
+<head ng-controller="HTMLHeaderController">
+<meta charset="utf-8">
+<title>{{browserTitle}}</title>
+<meta name="content" value="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-messages.min.js"></script>
+
+</head>
+
+<body>
+<nav ng-controller="navigationController" class="navbar sticky-top navbar-toggleable-sm navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">jtmorris.me</a>
+   <div class="collapse navbar-collapse float-lg-right" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#page-top">page top</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#jtmorris-learns-php">jtmorris learns php</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#jtmorris-learns-php">hello {{$scope.appdev.fName}}!</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+  <div class="row">
+	  <div class="col-md">
+		  <div>
+        <h1>hello {{appdev.fName + " " + appdev.lName}}</h1>
+          <form>
+           <label>whats your twitter handle</label>
+            <input type="text" ng-model="handle">
+            <div style="width:50%;"class="alert alert-danger" role="alert" ng-show="handle.length >= handleMaxChars"><p>the twitter handle must be no more than {{handleMaxChars}} long.<br />
+        the handle is currently {{handle.length}} characters long.</p> 
+            </div>
+          </form>
+          <h1>twitter.com/{{lowercasehandle(handle)}}</h1>
+      
+      </div>
+    </div>
+  </div>
+  <hr>
+      <div class="row">
+        <div class="col-md">
+          <form>
+            <label>change the title of the browser tab</label>
+            <input type="text" ng-model="browserTitle">
+        </div>
+      </div>
+	</div>
+</div>
+<script src="http://localhost/js/app.js">
+</script>
+
+</body>
+</html>
